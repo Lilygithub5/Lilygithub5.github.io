@@ -1,7 +1,6 @@
-
 body {
-    background-color: rgb(241, 247, 247);
-    font-family: Helvetica, Arial, sans-serif;
+    background-color: rgb(249, 252, 236);
+    font-family: "Sofadi One", "Playpen Sans", Helvetica, Arial, sans-serif;
     margin: 0px;
     font-size: 1.5vw;
 }
@@ -9,8 +8,8 @@ body {
 #logo {
     margin: 0px;
     padding: 8px;
-    font-family: "Fredoka One", sans-serif;
-    text-shadow: 1px 1px 2px rgb(146, 6, 246);
+    font-family: "Sofadi One", "Playpen Sans", sans-serif;
+    text-shadow: 1px 1px 2px rgb(16, 0, 34);
     width: 15%;
 }
 
@@ -18,18 +17,22 @@ ul {
     margin: 0px;
 }
 
-body > header {
-    background-color: rgb(196, 204, 254);
-    color: rgb(246, 248, 251);
+header {
+    background-color: rgb(39, 1, 194);
+    color: rgb(254, 247, 213);
     display: flex;
     height: 8vh;
     align-items: center;
     justify-content: space-around;
+    border: 0.5px solid rgb(52, 1, 93);
+    grid-area: header;
 }
 
 #nav-ul {
     display: flex;
-    justify-content: ;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
 }
 
 #nav-ul > li {
@@ -37,17 +40,16 @@ body > header {
     margin: 16px;
 }
 
-body > header > nav > ul {
-    list-style: none;
-    text-decoration: none;
-}
-
 .navbutton {
-    color: aliceblue;
+    color: rgb(254, 247, 213);
     text-decoration: none;
     padding: 10px;
     border: 1px solid blueviolet;
     border-radius: 10%;
+}
+
+#menu {
+    grid-area: menu;
 }
 
 body > main article {
@@ -55,9 +57,14 @@ body > main article {
     margin: auto;
 }
 
+body > div > main > div > aside {
+    background-color: rgb(244, 218, 250);
+}
+
 #main-content {
     display: flex;
     justify-content: space-around;
+    grid-area: main;
 }
 
 #main-content > div {
@@ -72,9 +79,12 @@ h2 {
     text-align: center;
 }
 
-body > footer {
-    background-color: rgb(196, 204, 254);
+footer {
+    padding: 5px;
+    background-color: rgb(39, 1, 194);
+    border: 0.5px solid rgb(52, 1, 93);
     display: flex;
+    grid-area: footer;
 }
 
 #footer-ul {
@@ -84,15 +94,121 @@ body > footer {
 }
 
 #footer-ul > div > li {
-    margin-left: 15px;
+    margin-left: 0px;
 }
 
 #footer-ul > div > li > a{
-    color: aliceblue;
+    color: rgb(254, 247, 213);
     text-decoration: none;
+    padding: 5px;
 }
 
 img {
     border-radius: 50%;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "menu item1 item1"
+    "menu item2 item3"
+    "menu item5 item4"
+    "menu item5 item6"
+    ;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-rows: auto;
+    gap: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+#grid-container > main article {
+    background-color: antiquewhite;
+    border: 1px solid;
+    padding: 0px;
+    text-align: center;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(244, 218, 250);
+    border: 2px solid rgb(250, 230, 230);
+    border-radius: 2%;
+    border-color: rgb(69, 2, 96);
+    width: 350px;
+    height: 50px;
+    justify-content: space-around;
+}
+
+form h2 {
+    margin-top: 10px;
+    font-size: 9px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+form label {
+    margin-top: 12px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form input[type="text"] {
+    width: 20%;
+    padding: 5px;
+    margin: 5px;
+    background-color: aliceblue;
+    font-size: 8px;
+}
+
+form input[type="email"] {
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    background-color: aliceblue;
+    font-size: 8px;
+}
+
+form textarea {
+    width: 20%;
+    padding: 5px;
+    margin: 5px;
+    height: 10px;
+}
+
+form input[type="submit"] {
+    width: 15%;
+    padding: 5px;
+    margin-right: 2px;
+    font-size: 6px;
+    font-weight: bold;
+    margin: 5px;
+    background-color: aliceblue;
+}
